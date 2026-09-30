@@ -6,8 +6,9 @@
   <remote  name="yocto" fetch="https://git.yoctoproject.org/"/>
   <remote  name="QT6" fetch="https://code.qt.io/yocto"/>
 
-  <default remote="origin" revision="refs/tags/SUMMIT-REL-7.2.0.5" />
+  <default remote="origin" revision="refs/tags/SUMMIT-REL-7.2.0.15" />
 
+  <!-- NXP BSP Layers Start -->
   <project path="sources/base"
            name="Freescale/fsl-community-bsp-base"
            remote="github"
@@ -45,36 +46,56 @@
     <linkfile src="README.md" dest="README-IMXBSP"/>
 
   </project>
+  <!-- NXP BSP Layers End -->
 
+  <!-- TI BSP Layers Start -->
+  <project path="sources/meta-ti"
+           name="meta-ti"
+           remote="yocto"
+           revision="refs/tags/12.01.00.05"/>
+
+  <project path="sources/meta-arago"
+           name="meta-arago"
+           remote="yocto"
+           revision="refs/tags/12.01.00.05"/>
+  <!-- TI BSP Layers End -->
+
+  <!-- Yocto/Platform Layers Start -->
   <project path="sources/bitbake" 
            name="openembedded/bitbake"
            remote="github"
-           revision="refs/tags/yocto-6.0.2"/>
+           revision="refs/tags/yocto-6.0.3"/>
 
   <project path="sources/openembedded-core"
            name="openembedded/openembedded-core"
            remote="github"
-           revision="refs/tags/yocto-6.0.2"/>
+           revision="refs/tags/yocto-6.0.3"/>
+
+  <!-- rust 1.98.1 support -->
+  <project path="sources/meta-lts-mixins"
+            name="meta-lts-mixins"
+            remote="yocto"
+            revision="e575397f478a51fccf17b72459bb4d5c68a853c7"/>
 
   <project path="sources/meta-openembedded"
            name="openembedded/meta-openembedded"
            remote="github"
-           revision="d97b5602d7f64422c94b7311466cda7f6b1962d5"/>
+           revision="14282a02be9c74a1276a7cda7d6c89e054699a11"/>
 
   <project path="sources/meta-yocto"
            name="meta-yocto"
            remote="yocto"
-           revision="refs/tags/yocto-6.0.2"/>
+           revision="refs/tags/yocto-6.0.3"/>
 
   <project path="sources/meta-arm"
            name="meta-arm"
            remote="yocto"
-           revision="caa36c53f796beb25d9b9f58b1b7a492e9987e15"/>
+           revision="9dab8bdd4991973faa6dfc5b3c607f4c09cc1cdb"/>
 
   <project path="sources/meta-qt6"
            name="meta-qt6"
            remote="QT6"
-           revision="refs/tags/v6.11.1"/>
+           revision="refs/tags/v6.12.0"/>
 
   <project path="sources/meta-timesys"
            name="TimesysGit/meta-timesys"
@@ -84,13 +105,15 @@
   <project path="sources/meta-swupdate"
            name="sbabic/meta-swupdate"
            remote="github"
-           revision="c3eba00d3252ef17fed4812473c47c87fb34db40"/>
+           revision="c0658455606b3a37d85d7cf03703d8b8d2ead667"/>
 
   <project path="sources/meta-aws"
            name="aws4embeddedlinux/meta-aws"
            remote="github"
            revision="5e7cc95f7d55a0ba0ae6a7e6e43e6323811a140a"/>
+  <!-- Yocto/Platform Layers End -->
 
+  <!-- Ezurio Layers Start -->
   <project path="sources/meta-summit-radio"
            name="meta-summit-radio"
            revision="lrd-14.8.0.x"/>
@@ -99,7 +122,9 @@
            name="meta-summit-som">
 
     <linkfile src="tools/setup-environment-nxp" dest="setup-environment-nxp"/>
-
+    <linkfile src="tools/setup-environment-ti" dest="setup-environment-ti"/>
+    <linkfile src="tools/setup-environment-combo" dest="setup-environment-combo"/>
   </project>
+  <!-- Ezurio Layers End -->
 
 </manifest>
