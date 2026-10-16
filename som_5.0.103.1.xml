@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="origin" fetch="https://github.com/Ezurio" />
+  <remote  name="github" fetch="https://github.com/" />
+  <remote  name="yocto" fetch="https://git.yoctoproject.org/"/>
+  <remote  name="gitlab" fetch="https://gitlab.com/" />
+  <remote  name="QT6" fetch="https://code.qt.io/yocto"/>
+
+  <default remote="origin" revision="refs/tags/SUMMIT-REL-5.0.103.1" />
+
+  <project path="sources/meta-openembedded"
+           name="openembedded/meta-openembedded"
+           remote="github"
+           revision="b5874ea07d69919d9b40d59f2c2f0bbd24bc3259"/>
+
+  <!-- rust 1.98.1 support -->
+  <project path="sources/meta-lts-mixins"
+           name="meta-lts-mixins"
+           remote="yocto"
+           revision="eedcdc7486ff15c3510c2ceff68c87d9db141312"/>
+
+  <project path="sources/meta-arm"
+           name="meta-arm"
+           remote="yocto"
+           revision="0a4b911d9fd63ab29c4532a907fae3282dbdcfe4"/>
+
+  <project path="sources/meta-qt6"
+           name="meta-qt6"
+           remote="QT6"
+           revision="refs/tags/v6.10.3"/>
+
+  <project path="sources/meta-timesys"
+           name="TimesysGit/meta-timesys"
+           remote="github"
+           revision="scarthgap"/>
+
+  <project path="sources/poky"
+           name="poky"
+           remote="yocto"
+           revision="refs/tags/yocto-5.0.20"/>
+
+  <project path="sources/meta-clang"
+           name="kraj/meta-clang"
+           remote="github"
+           revision="cc29beb210ab94eacc53bbd67e287e4e33ede342"/>
+
+  <project path="sources/meta-swupdate"
+           name="sbabic/meta-swupdate"
+           remote="github"
+           revision="7da41c5f2eb58c95cf5b312cf0b34fdfc7bb1e4e"/>
+
+  <project path="sources/meta-aws"
+           name="aws4embeddedlinux/meta-aws"
+           remote="github"
+           revision="refs/tags/scarthgap-2026.37.0"/>
+
+  <project path="sources/meta-summit-radio"
+           name="meta-summit-radio"
+           revision="lrd-14.0.45.x"/>
+
+  <project path="sources/meta-summit-som"
+           name="meta-summit-som">
+
+    <linkfile src="tools/setup-environment-combo" dest="setup-environment-combo"/>
+    <linkfile src="tools/setup-environment-mtk" dest="setup-environment-mtk"/>
+
+  </project>
+
+  <project path="sources/meta-mediatek-bsp"
+     name="mediatek/aiot/rity/meta-mediatek-bsp"
+     remote="gitlab"
+     revision="8334eeab1c9b50ce6e4eb6c2a7a81aba40c4b3c4"/>
+
+</manifest>
