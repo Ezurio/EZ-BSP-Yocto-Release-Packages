@@ -1,6 +1,5 @@
 EZ BSP Yocto Release Packages
 
-- Latest release for NXP i.MX 8/9 based SOMs (Nitrogen, SummitSOM) - 6.16.0.27
-- Latest release for TI AM6x based SOMs (Carbon) - 5.102.0.17
+- Latest release for NXP i.MX 8/9 based (Nitrogen, SummitSOM) and TI AM6x based (Carbon) SOMs - 7.2.0.26
 
 Please visit https://github.com/Ezurio/EZ-BSP-Yocto-Release-Packages/releases
