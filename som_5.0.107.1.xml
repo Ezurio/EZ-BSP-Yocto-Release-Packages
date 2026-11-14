@@ -7,12 +7,12 @@
   <remote  name="gitlab" fetch="https://gitlab.com/" />
   <remote  name="QT6" fetch="https://code.qt.io/yocto"/>
 
-  <default remote="origin" revision="refs/tags/SUMMIT-REL-5.0.103.1" />
+  <default remote="origin" revision="refs/tags/SUMMIT-REL-5.0.107.1" />
 
   <project path="sources/meta-openembedded"
            name="openembedded/meta-openembedded"
            remote="github"
-           revision="b5874ea07d69919d9b40d59f2c2f0bbd24bc3259"/>
+           revision="2db6aece32c7f8ebf6015b468e1b4e21de072e3b"/>
 
   <!-- rust 1.98.1 support -->
   <project path="sources/meta-lts-mixins"
@@ -38,7 +38,7 @@
   <project path="sources/poky"
            name="poky"
            remote="yocto"
-           revision="refs/tags/yocto-5.0.20"/>
+           revision="refs/tags/yocto-5.0.21"/>
 
   <project path="sources/meta-clang"
            name="kraj/meta-clang"
@@ -48,7 +48,7 @@
   <project path="sources/meta-swupdate"
            name="sbabic/meta-swupdate"
            remote="github"
-           revision="7da41c5f2eb58c95cf5b312cf0b34fdfc7bb1e4e"/>
+           revision="fdd6828776f9000eebec1d1fe2bc72fa719474d7"/>
 
   <project path="sources/meta-aws"
            name="aws4embeddedlinux/meta-aws"
@@ -56,8 +56,8 @@
            revision="refs/tags/scarthgap-2026.37.0"/>
 
   <project path="sources/meta-summit-radio"
-           name="meta-summit-radio"
-           revision="lrd-14.0.45.x"/>
+           name="cp_yocto-meta-summit-radio"
+           revision="lrd-14.56.0.x"/>
 
   <project path="sources/meta-summit-som"
            name="meta-summit-som">
