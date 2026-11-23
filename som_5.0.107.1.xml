@@ -56,7 +56,7 @@
            revision="refs/tags/scarthgap-2026.37.0"/>
 
   <project path="sources/meta-summit-radio"
-           name="cp_yocto-meta-summit-radio"
+           name="meta-summit-radio"
            revision="lrd-14.56.0.x"/>
 
   <project path="sources/meta-summit-som"
